@@ -4,6 +4,8 @@ services:
     build: ./mysql/
     volumes:
         - ./mysql/mysql_data:/var/lib/mysql
+        - ./tmp/data:/tmp/data
+        - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     environment:
       - MYSQL_ROOT_PASSWORD=root
     tty: true
