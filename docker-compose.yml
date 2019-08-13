@@ -1,14 +1,9 @@
-version: '2'
+version: '3'
 services:
   mysql:
     build: ./mysql/
     volumes:
       - ./mysql/mysql_data:/var/lib/mysql # データの永続化
-      - ./mysql/sqls:/docker-entrypoint-initdb.d # 初期データ投入
     environment:
-      - MYSQL_ROOT_PASSWORD=好きなパスワード #rootパスワードの設定
-  appserver:
-    build:
-      context: ./app/
-    links:
-      - mysql
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
