@@ -23,6 +23,7 @@ $csv-file
 ```
 
 ### mysql
+データをimportする場合
 
 ```
 mysql> CREATE DATABASE $database-name DEFAULT CHARACTER SET utf8;
