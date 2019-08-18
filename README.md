@@ -29,19 +29,19 @@ $csv-file
 mysql> CREATE DATABASE $database-name DEFAULT CHARACTER SET utf8;
 
 mysql > CREATE TABLE $table-name(
-    `Id` int(11),
-    `Keyword` varchar(50),
-    `Position` int(11),
-    `PositionHistory` int(11),
-    `PositionHistoryDate` datetime,
-    `Volume` int(11),
-    `URL` varchar(50),
-    `Difficulty` int(11),
-    `Traffic` int(11),
-    `CPC` double,
-    `LastUpdate` datetime,
-    `PageURLinside` varchar(50),
-    `SERPFeatures` varchar(50)
+    `id` int(11),
+    `keyword` varchar(50),
+    `position` int(11),
+    `position_history` int(11),
+    `position_history_date` datetime,
+    `volume` int(11),
+    `url` varchar(50),
+    `difficulty` int(11),
+    `traffic` int(11),
+    `cpc` double,
+    `last_update` datetime,
+    `page_url_inside` varchar(50),
+    `serpfeatures` varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 mysql> load data local infile "/tmp/data/$csv-file" into table $table-name fields terminated by ',' optionally enclosed by '"';
